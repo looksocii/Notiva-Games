@@ -1,0 +1,25 @@
+{% extends "public_base.html" %}
+
+{% block content %}
+<div class="ui link cards four column doubling stackable grid container">
+    {% for Game in Games %}
+        <div class="card">
+            <div class="blurring dimmable image">
+            <img src="{{ Game.image.url}}">
+            </div>
+            <div class="content">
+            <a class="header">{{ Game.name }}</a>
+            <div class="meta">
+                <span class="date">{{ Game.add_date }}</span>
+            </div>
+            </div>
+            <div class="extra content">
+                <button class="tiny ui secondary button">Buy</button>
+                <a>
+                    {{ Game.price }} <i class="dollar sign icon"></i>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

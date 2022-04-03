@@ -1,0 +1,55 @@
+{% extends "public_base.html" %}
+
+{% block content %}
+<div class="ui card container segment">
+    <div class="image">
+      <img src="{{ Game.image.url}}">
+    </div>
+    <div class="content">
+      <a class="header">{{ Game.name }}</a>
+      <div class="meta">
+        <span class="date">{{ Game.add_date }}</span>
+      </div>
+    </div>
+    <div class="extra content">
+        <button class="fluid ui secondary button">
+            Buy {{ Game.price }} $
+        </button>
+    </div>
+</div>
+
+<div class="ui container segment">
+    <img class="ui fluid image" src="https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Ffar-cry-5%2Fhome%2FDog_1080p_GOLD_ESRB-1920x1080-3467d90a0dd6e62aa9d47d78f158551fc29ff3c5.jpg?h=720&resize=1&w=1280">
+    <img class="ui fluid image" src="https://notebookspec.com/web/wp-content/uploads/2017/10/far-cry-5-screen-01-ps4-us-15may17.jpg">
+    <h4 class="ui horizontal divider header">
+        <i class="file alternate icon"></i>
+        Description
+      </h4>
+  <p>{{ Game.description }}</p>
+  <h4 class="ui horizontal divider header">
+    <i class="cog icon"></i>
+    Requirements
+  </h4>
+  <table class="ui definition table">
+    <tbody>
+      <tr>
+        <td class="two wide column">Size</td>
+        <td>1" x 2"</td>
+      </tr>
+      <tr>
+        <td>Weight</td>
+        <td>6 ounces</td>
+      </tr>
+      <tr>
+        <td>Color</td>
+        <td>Yellowish</td>
+      </tr>
+      <tr>
+        <td>Odor</td>
+        <td>Not Much Usually</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
